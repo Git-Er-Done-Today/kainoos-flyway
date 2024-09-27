@@ -26,3 +26,6 @@ ADD FOREIGN KEY (sales_employee_id) REFERENCES Sales_Employee(sales_employee_id)
 
 ALTER TABLE Delivery_Employee_Project
 ADD FOREIGN KEY (delivery_employee_id) REFERENCES Delivery_Employee(delivery_employee_id);
+
+ALTER TABLE Employee
+DROP COLUMN role;
