@@ -27,6 +27,8 @@ CREATE TABLE Delivery_Employee_Project (
     project_id INT NOT NULL,
     working_on_project BOOLEAN NOT NULL,
     PRIMARY KEY(delivery_employee_id, working_on_project)
+    FOREIGN KEY (delivery_employee_id) REFERENCES `Employee`(employee_id)
+    FOREIGN KEY (project_id) REFERENCES `Project`(project_id)
 );
 
 CREATE TABLE Technology (
@@ -55,4 +57,6 @@ CREATE TABLE Project_Technology (
     project_id INT NOT NULL,
     technology_id INT NOT NULL,
     PRIMARY KEY (project_id, technology_id)
+    FOREIGN KEY (project_id) REFERENCES `Project`(project_id)
+    FOREIGN KEY (technology_id) REFERENCES `Technology`(technology_id)
 );
