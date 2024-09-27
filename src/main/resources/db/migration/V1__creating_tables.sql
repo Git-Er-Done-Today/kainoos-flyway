@@ -51,7 +51,6 @@ CREATE TABLE Project (
     FOREIGN KEY (client_id) REFERENCES `Client`(client_id)
 );
 
-
 CREATE TABLE Project_Technology (
     project_id INT NOT NULL,
     technology_id INT NOT NULL,
