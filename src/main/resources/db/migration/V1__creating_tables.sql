@@ -24,7 +24,7 @@ CREATE TABLE `Client` (
 CREATE TABLE Delivery_Employee_Project (
     delivery_employee_id INT NOT NULL,
     project_id INT NOT NULL,
-    working_on_proj BOOLEAN NOT NULL,
+    working_on_project BOOLEAN NOT NULL,
     PRIMARY KEY(delivery_employee_id, working_on_proj)
 );
 
