@@ -1,5 +1,5 @@
-Select c.name, SUM(p.value) as 'Project Value'
-from Client c
-join Project as p using (client_id)
-group by c.name
-order by SUM(p.value) DESC LIMIT 1;
+Select Client.name, SUM(Project.value) as 'Project Value'
+from Client
+join Project using (client_id)
+group by Client.name
+order by SUM(Project.value) DESC LIMIT 1;
