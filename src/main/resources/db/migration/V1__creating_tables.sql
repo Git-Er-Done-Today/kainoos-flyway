@@ -45,8 +45,9 @@ CREATE TABLE Project (
     FOREIGN KEY (client_id) REFERENCES `Client`(client_id)
 );
 
-CREATE TABLE Tech_Proj (
-    tech_id INT NOT NULL,
+
+CREATE TABLE Project_Technology (
     proj_id INT NOT NULL,
-    PRIMARY KEY (tech_id, proj_id)
+    tech_id INT NOT NULL,
+    PRIMARY KEY (proj_id, tech_id)
 );
