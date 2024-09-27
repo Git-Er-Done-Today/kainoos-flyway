@@ -2,7 +2,7 @@ CREATE TABLE Employee (
     employee_id INT AUTO_INCREMENT NOT NULL,
     name varchar(60) NOT NULL,
     role varchar(40) NOT NULL,
-    nation_insurance varchar(13) NOT NULL,
+    nation_insurance_num varchar(13) NOT NULL,
     bank_account varchar(40) NOT NULL,
     salary DECIMAL(10, 2) NOT NULL,
     PRIMARY KEY (employee_id)
