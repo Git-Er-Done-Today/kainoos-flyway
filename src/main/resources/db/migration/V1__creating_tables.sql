@@ -29,9 +29,9 @@ CREATE TABLE Delivery_Employee_Project (
 );
 
 CREATE TABLE Technology (
-    tech_id INT NOT NULL,
+    technology_id INT NOT NULL,
     name varchar(60) NOT NULL,
-    PRIMARY KEY (tech_id)
+    PRIMARY KEY (technology_id)
 );
 
 CREATE TABLE Project (
@@ -52,7 +52,7 @@ CREATE TABLE Project (
 
 
 CREATE TABLE Project_Technology (
-    proj_id INT NOT NULL,
-    tech_id INT NOT NULL,
-    PRIMARY KEY (proj_id, tech_id)
+    project_id INT NOT NULL,
+    technology_id INT NOT NULL,
+    PRIMARY KEY (project_id, technology_id)
 );
