@@ -22,21 +22,6 @@ CREATE TABLE `Client` (
     PRIMARY KEY (client_id)
 );
 
-CREATE TABLE Delivery_Employee_Project (
-    delivery_employee_id INT NOT NULL,
-    project_id INT NOT NULL,
-    working_on_project BOOLEAN NOT NULL,
-    PRIMARY KEY(delivery_employee_id, working_on_project)
-    FOREIGN KEY (delivery_employee_id) REFERENCES `Employee`(employee_id)
-    FOREIGN KEY (project_id) REFERENCES `Project`(project_id)
-);
-
-CREATE TABLE Technology (
-    technology_id INT AUTO_INCREMENT NOT NULL,
-    name varchar(60) NOT NULL,
-    PRIMARY KEY (technology_id)
-);
-
 CREATE TABLE Project (
     project_id INT AUTO_INCREMENT NOT NULL,
     `name` varchar(60) NOT NULL,
@@ -53,10 +38,25 @@ CREATE TABLE Project (
     FOREIGN KEY (client_id) REFERENCES `Client`(client_id)
 );
 
+CREATE TABLE Delivery_Employee_Project (
+    delivery_employee_id INT NOT NULL,
+    project_id INT NOT NULL,
+    working_on_project BOOLEAN NOT NULL,
+    PRIMARY KEY(delivery_employee_id, working_on_project),
+    FOREIGN KEY (delivery_employee_id) REFERENCES `Employee`(employee_id),
+    FOREIGN KEY (project_id) REFERENCES `Project`(project_id)
+);
+
+CREATE TABLE Technology (
+    technology_id INT AUTO_INCREMENT NOT NULL,
+    name varchar(60) NOT NULL,
+    PRIMARY KEY (technology_id)
+);
+
 CREATE TABLE Project_Technology (
     project_id INT NOT NULL,
     technology_id INT NOT NULL,
-    PRIMARY KEY (project_id, technology_id)
-    FOREIGN KEY (project_id) REFERENCES `Project`(project_id)
+    PRIMARY KEY (project_id, technology_id),
+    FOREIGN KEY (project_id) REFERENCES `Project`(project_id),
     FOREIGN KEY (technology_id) REFERENCES `Technology`(technology_id)
 );
