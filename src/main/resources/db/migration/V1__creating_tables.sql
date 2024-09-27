@@ -30,7 +30,7 @@ CREATE TABLE Delivery_Employee_Project (
 );
 
 CREATE TABLE Technology (
-    technology_id INT NOT NULL,
+    technology_id INT AUTO_INCREMENT NOT NULL,
     name varchar(60) NOT NULL,
     PRIMARY KEY (technology_id)
 );
