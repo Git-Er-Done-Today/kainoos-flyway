@@ -18,7 +18,7 @@ CREATE TABLE `Client` (
     address_province varchar(20) NOT NULL,
     address_region varchar(20) NOT NULL,
     address_country varchar(30) NOT NULL,
-    address_post_code varchar(10) NOT NULL,
+    address_post_code varchar(10),
     PRIMARY KEY (client_id)
 );
 
