@@ -4,6 +4,3 @@ INSERT INTO Employee (name, national_insurance_no, bank_account, salary) VALUES
 
 INSERT INTO Sales_Employee (employee_id) VALUES
 (1), (2);
-
-SELECT * FROM Employee;
-SELECT * FROM Sales_Employee;
