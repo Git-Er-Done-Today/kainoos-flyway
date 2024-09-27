@@ -11,7 +11,7 @@ CREATE TABLE Employee (
 CREATE TABLE `Client` (
     client_id INT AUTO_INCREMENT NOT NULL,
     name varchar(60) NOT NULL,
-    phone_number varchar(20) NOT NULL,
+    phone_number varchar(15) NOT NULL,
     address_line_1 varchar(30) NOT NULL,
     address_line_2 varchar(30),
     address_city varchar(20) NOT NULL,
