@@ -1,6 +1,4 @@
-USE Kainoos_Test_CharM;
-
-CREATE TABLE Employees 
+CREATE TABLE Employee
 (employee_id INT AUTO_INCREMENT, 
 name varchar(60),
 role varchar(40),
@@ -42,6 +40,7 @@ sales_employee_id INT,
 commission DECIMAL(10,2),
 start_date DATE,
 completion_date DATE,
+PRIMARY KEY (project_id),
 FOREIGN KEY (tech_lead_id) REFERENCES Employee(employee_id),
 FOREIGN KEY (sales_employee_id) REFERENCES Employee(employee_id),
 FOREIGN KEY (client_id) REFERENCES `Client`(client_id)
